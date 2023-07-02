@@ -98,15 +98,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex h-20 items-center justify-between py-6">
                 <MainNav items={marketingConfig.mainNav} />
                 <nav>
-                  <Link
-                    href="/login"
+                  <a
+                    href="https://firecamp.dev"
+                    target="_blank"
                     className={cn(
                       buttonVariants({ variant: "secondary", size: "sm" }),
                       "px-4"
                     )}
                   >
-                    Login
-                  </Link>
+                    Launch Firecamp
+                  </a>
                 </nav>
               </div>
             </header>

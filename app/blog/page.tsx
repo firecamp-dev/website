@@ -64,7 +64,7 @@ export default async function BlogPage() {
           ))}
         </div>
       ) : (
-        <p>{posts.length} No posts published.</p>
+        <p>No posts published.</p>
       )}
     </div>
   )
