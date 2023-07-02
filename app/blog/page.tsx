@@ -12,10 +12,11 @@ export const metadata = {
 
 export default async function BlogPage() {
   const posts = allPosts
-    .filter((post) => post.published)
+    // .filter((post) => post.published)
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date))
     })
+  // console.log(posts)
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
@@ -56,7 +57,7 @@ export default async function BlogPage() {
                   {formatDate(post.date)}
                 </p>
               )}
-              <Link href={post.url} className="absolute inset-0">
+              <Link href={post.slug} className="absolute inset-0">
                 <span className="sr-only">View Article</span>
               </Link>
             </article>
