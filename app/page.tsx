@@ -46,10 +46,10 @@ export default async function IndexPage() {
                         Follow along on Twitter
                     </Link>
                     <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-                        The most versatile API platform like VSCode
+                        Open Source Postman Alternative
                     </h1>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-                        Multi-protocol API platform, Open Source alternative of Postman, Apollo Studio
+                        Firecamp helps to build APIs 3x faster with great developer experience
                     </p>
                     <div className="space-x-4">
                         <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
