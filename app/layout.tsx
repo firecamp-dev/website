@@ -18,16 +18,16 @@ interface MarketingLayoutProps {
   children: React.ReactNode
 }
 
-// const fontSans = FontSans({
-//   subsets: ["latin"],
-//   variable: "--font-sans",
-// })
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 // Font files can be colocated inside of `pages`
-// const fontHeading = localFont({
-//   src: "../assets/fonts/CalSans-SemiBold.woff2",
-//   variable: "--font-heading",
-// })
+const fontHeading = localFont({
+  src: "../assets/fonts/CalSans-SemiBold.woff2",
+  variable: "--font-heading",
+})
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -87,8 +87,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          // fontSans.variable,
-          // fontHeading.variable
+          fontSans.variable,
+          fontHeading.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
