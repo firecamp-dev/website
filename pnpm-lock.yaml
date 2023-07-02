@@ -83,6 +83,9 @@ dependencies:
   remark-gfm:
     specifier: ^3.0.1
     version: 3.0.1
+  shiki:
+    specifier: ^0.14.3
+    version: 0.14.3
   tailwind-merge:
     specifier: ^1.13.2
     version: 1.13.2
@@ -95,6 +98,9 @@ dependencies:
   typescript:
     specifier: 5.1.6
     version: 5.1.6
+  zod:
+    specifier: ^3.21.4
+    version: 3.21.4
 
 packages:
 
