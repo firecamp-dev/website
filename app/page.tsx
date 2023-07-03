@@ -39,7 +39,7 @@ export default async function IndexPage() {
 
     return (
         <>
-            <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+            <section className="space-y-10 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32 lg:pb-30">
                 <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
                     <Link
                         href={siteConfig.links.twitter}
@@ -48,7 +48,7 @@ export default async function IndexPage() {
                     >
                         Follow along on Twitter
                     </Link>
-                    <h1 className="font-heading text-3xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-slate-500 to-slate-400 bg-clip-text text-transparent">
+                    <h1 className="font-heading text-3xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent">
                         Open Source Postman Alternative
                     </h1>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
