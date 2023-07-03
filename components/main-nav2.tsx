@@ -77,19 +77,19 @@ export function NavigationMenuDemo() {
                                                 Rest Playground
                                             </div>
                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                Dedicated API Playgrounds for each protocols.
+                                                Work with Rest APIs effortlessly
                                             </p>
                                         </a>
                                     </NavigationMenuLink>
                                 </li>
                                 <ListItem href="/graphql" title="GraphQL Playground">
-                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                    Play with GraphQL operations instantly.
                                 </ListItem>
                                 <ListItem href="/websocket" title="WebSocket">
-                                    Styles for headings, paragraphs, lists...etc
+                                    Observer realtime WS events over active connection.
                                 </ListItem>
                                 <ListItem href="/socketio" title="SocketIO">
-                                    Styles for headings, paragraphs, lists...etc
+                                    Test your connection, listener and emitter events visually
                                 </ListItem>
                             </ul>
                         </NavigationMenuContent>
