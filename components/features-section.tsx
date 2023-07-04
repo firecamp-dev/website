@@ -43,7 +43,7 @@ export function FeaturesSection({
             </div>
             <div className="mx-auto text-center md:max-w-[58rem]">
                 <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                   Firecamp is a truly Multi-protocol Platform, which offers end-to-end solution for protocols with dedicated Playground.
+                    Firecamp is a truly Multi-protocol Platform, which offers end-to-end solution for protocols with dedicated Playground.
                 </p>
             </div>
         </section>
