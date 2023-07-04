@@ -9,6 +9,19 @@ interface FeaturesSectionProps {
 export function FeaturesSection({
     ...props
 }: FeaturesSectionProps) {
+
+    const features: { icon: any, name: string, description: string }[] = [
+        { icon: <Folder className="h-12 w-12 fill-current" />, name: "API Collection", description: "Manage Collection of APIs to collaborate within team" },
+        { icon: <Tv2 className="h-12 w-12" />, name: "API Playgrounds", description: "Get instant playgrounds for your APIs. Rest, GraphQL and more." },
+        { icon: <Share2 className="h-12 w-12" />, name: "API Collaboration", description: "Collaborate with your team at centralize shared workspace." },
+        { icon: <FileText className="h-12 w-12" />, name: "API Documentation", description: "Publish a beautiful API documentation for your team and community" },
+        { icon: <Play className="h-12 w-12 fill-current" />, name: "API Test Runner", description: "Run the API Collection visually within the platform" },
+        { icon: <Terminal className="h-12 w-12" />, name: "CLI & CI/CD", description: "Run API Collection Tests in terminal or set in CI/CD pipeline" },
+        { icon: <Braces className="h-12 w-12" />, name: "Variables", description: "Set values in variables to reuse in whole platform dynamically" },
+        { icon: <AppWindow className="h-12 w-12" />, name: "Web & Desktop App", description: "Get Web and Desktop apps whichever is suitable for your API workflow" },
+        { icon: <Shield className="h-12 w-12 fill-current" />, name: "Authentication", description: "Test and Debug your auth endpoints with range of supported auths" }
+    ]
+
     return (
         <section
             id="features"
@@ -26,67 +39,11 @@ export function FeaturesSection({
                 </p>
             </div>
             <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-
-                <Feature
-                    icon={<Folder className="h-12 w-12 fill-current" />}
-                    name="API Collection"
-                    description="App dir, Routing, Layouts, Loading UI and API routes."
-                />
-
-                <Feature
-                    icon={<Tv2 className="h-12 w-12" />}
-                    name="API Playgrounds"
-                    description="Server and Client Components. Use hook."
-                />
-
-                <Feature
-                    icon={<Share2 className="h-12 w-12" />}
-                    name="API Collaboration"
-                    description="ORM using Prisma and deployed on PlanetScale."
-                />
-
-
-                <Feature
-                    icon={<FileText className="h-12 w-12" />}
-                    name="API Documentation"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
-                <Feature
-                    icon={<Play className="h-12 w-12 fill-current" />}
-                    name="API Test Runner"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
-                <Feature
-                    icon={<Terminal className="h-12 w-12" />}
-                    name="CLI & CI/CD"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
-                <Feature
-                    icon={<Braces className="h-12 w-12" />}
-                    name="Variables"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
-                <Feature
-                    icon={<AppWindow className="h-12 w-12" />}
-                    name="Web & Desktop App"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
-                <Feature
-                    icon={<Shield className="h-12 w-12 fill-current" />}
-                    name="Authentication"
-                    description="Authentication using NextAuth.js and middlewares."
-                />
-
+                {features.map((f, i) => <Feature icon={f.icon} name={f.name} description={f.description} key={i} />)}
             </div>
             <div className="mx-auto text-center md:max-w-[58rem]">
                 <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                    Taxonomy also includes a blog and a full-featured documentation site
-                    built using Contentlayer and MDX.
+                   Firecamp is a truly Multi-protocol Platform, which offers end-to-end solution for protocols with dedicated Playground.
                 </p>
             </div>
         </section>
