@@ -118,6 +118,13 @@ export function NavigationMenuDemo() {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
+                        <Link href="/blog" legacyBehavior passHref>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle({ className: "text-foreground/60" })}>
+                                Blog
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
                         <Link href="/pricing" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({ className: "text-foreground/60" })}>
                                 Pricing
