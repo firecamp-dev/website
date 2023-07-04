@@ -75,11 +75,10 @@ export default async function IndexPage() {
             <section id="open-source" className="container py-8 md:py-12 lg:py-24">
                 <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
                     <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Proudly Open Source
+                        Embrace the Power of Open Source with Pride
                     </h2>
                     <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                        Taxonomy is open source and powered by open source software. <br />{" "}
-                        The code is available on{" "}
+                        We believe in the power of collaboration and community. That&apos;s why we&apos;re excited to announce that starting from the <span className="font-bold underline">15th of August</span>, we will proudly be open source!
                         <Link
                             href={siteConfig.links.github}
                             target="_blank"
@@ -90,7 +89,8 @@ export default async function IndexPage() {
                         </Link>
                         .{" "}
                     </p>
-                    {stars && (
+                    <p>Stay tuned for the big day on the 15th of August when we open our doors to the world of open source!</p>
+                    {
                         <Link
                             href={siteConfig.links.github}
                             target="_blank"
@@ -110,16 +110,31 @@ export default async function IndexPage() {
                             <div className="flex items-center">
                                 <div className="h-4 w-4 border-y-8 border-l-0 border-r-8 border-solid border-muted border-y-transparent"></div>
                                 <div className="flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-medium">
-                                    {stars} stars on GitHub
+                                    {/* {stars} stars on GitHub */}
+                                    GitHub
                                 </div>
                             </div>
                         </Link>
-                    )}
+                    }
                 </div>
             </section>
 
             <section id="testimonials" className="container py-8 md:py-12 lg:py-24">
                 <Testimonials />
+            </section>
+
+            <section id="open-source" className="container py-8 md:py-12 lg:py-24">
+                <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+                    <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        Pitch Your Tent at the API Campsite Today!
+                    </h2>
+
+                    <div className="space-x-4">
+                        <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+                            Launch Firecamp
+                        </Link>
+                    </div>
+                </div>
             </section>
         </>
     )

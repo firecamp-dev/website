@@ -40,9 +40,9 @@ export function Testimonials() {
             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-sm">
                     <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Listen to our users
+                        Loved by developers
                     </h2>
-                    <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Team who build their APIs with Firecamp</p>
+                    <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Why they build their APIs with Firecamp</p>
                 </div>
                 <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
                     {testimonials.map((t, i) => <FigureCard {...t} key={i} className={getClassName(i)} />)}
