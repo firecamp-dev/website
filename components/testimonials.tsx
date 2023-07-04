@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -26,6 +27,14 @@ const testimonials: any[] = [
 
 export function Testimonials() {
 
+    const getClassName = (i: number) => {
+        let className = "";
+        const modulo = i % 2;
+        if (modulo == 0) className = "lg:border-r";
+        if (i >= 2) className += " lg:border-t";
+        return className;
+    }
+
     return (
         <section className="bg-white dark:bg-gray-900">
             <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
@@ -36,17 +45,17 @@ export function Testimonials() {
                     <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Team who build their APIs with Firecamp</p>
                 </div>
                 <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
-                    {testimonials.map((t, i) => <FigureCard {...t} key={i} />)}
+                    {testimonials.map((t, i) => <FigureCard {...t} key={i} className={getClassName(i)} />)}
                 </div>
             </div>
         </section>
     )
 }
 
-const FigureCard: FC<{ header: string, say: string[], user: { name: string, title: string, image: string, } }> = ({ header, say, user: { name, title, image } }) => {
+const FigureCard: FC<{ className: string, header: string, say: string[], user: { name: string, title: string, image: string, } }> = ({ className, header, say, user: { name, title, image } }) => {
 
     return (
-        <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+        <figure className={clsx(className, "flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700")}>
             <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{header}</h3>
                 {
