@@ -36,15 +36,15 @@ export function Testimonials() {
     }
 
     return (
-        <section className="bg-white dark:bg-gray-900">
-            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-                <div className="mx-auto max-w-screen-sm">
+        <section className="container py-8 md:py-12 lg:py-12 bg-white dark:bg-gray-900" id="testimonials">
+            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center">
+                <div className="mx-auto max-w-screen-sm flex flex-col items-center space-y-4 text-center">
                     <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                         Loved by developers
                     </h2>
-                    <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Why they build their APIs with Firecamp</p>
+                    <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">They have reason to trust Firecamp, listen them on their own words</p>
                 </div>
-                <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
+                <div className="grid my-8 lg:my-12 lg:grid-cols-2">
                     {testimonials.map((t, i) => <FigureCard {...t} key={i} className={getClassName(i)} />)}
                 </div>
             </div>

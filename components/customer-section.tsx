@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-function CustomerSection() {
+export function CustomerSection() {
     return (
         <section className="bg-white py-8 sm:py-12 dark:bg-inherit">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -48,5 +48,3 @@ function CustomerSection() {
         </section>
     )
 }
-
-export default CustomerSection;

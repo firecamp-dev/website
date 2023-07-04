@@ -18,34 +18,34 @@ import {
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "API Collection",
-        href: "/docs/primitives/alert-dialog",
+        href: "#",
         description:
             "Manage collection as single source of truth for team collaboration",
     },
     {
         title: "API Playgrounds",
-        href: "/",
+        href: "#",
         description: "Get feature reach API playgrounds for your API testing need",
     },
     {
         title: "API Collaboration",
-        href: "/",
+        href: "#",
         description:
             "Use organization/workspaces to work collaboratively within team",
     },
     {
         title: "API Test Runner",
-        href: "/",
+        href: "#",
         description: "Run the API Collection in runner visually",
     },
     {
         title: "CLI & CI/CD",
-        href: "/",
+        href: "#",
         description: "Run the collection in terminal or run in CI/CD pipeline",
     },
     {
         title: "API Documentation",
-        href: "/",
+        href: "#",
         description: "Publish a beautiful API documentation for team or community",
     },
 ]
@@ -85,10 +85,10 @@ export function NavigationMenuDemo() {
                                 <ListItem href="/graphql" title="GraphQL Playground">
                                     Play with GraphQL operations instantly.
                                 </ListItem>
-                                <ListItem href="/websocket" title="WebSocket">
+                                <ListItem href="/websocket" title="WebSocket Playground">
                                     Observer realtime WS events over active connection.
                                 </ListItem>
-                                <ListItem href="/socketio" title="SocketIO">
+                                <ListItem href="/socketio" title="SocketIO Playground">
                                     Test your connection, listener and emitter events visually
                                 </ListItem>
                             </ul>

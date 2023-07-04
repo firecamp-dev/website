@@ -98,13 +98,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header className="container z-40 bg-background">
               <div className="flex h-20 items-center justify-between py-6">
                 {/* <MainNav items={marketingConfig.mainNav} /> */}
-                <NavigationMenuDemo/>
+                <NavigationMenuDemo />
                 <nav>
                   <a
                     href="https://firecamp.dev"
                     target="_blank"
                     className={cn(
-                      buttonVariants({ variant: "secondary", size: "sm" }),
+                      buttonVariants({ size: "sm" }),
                       "px-4"
                     )}
                   >
