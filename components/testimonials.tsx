@@ -1,3 +1,29 @@
+import Image from "next/image";
+import { FC } from "react";
+
+const testimonials: any[] = [
+    {
+        header: "All in one solution for my team",
+        say: ["Not only is Firecamp more accessible for developers of smaller projects or startups, but it boasts all the features that we've come to love from incumbent solutions and much, much more. My bet is on Firecamp as the next must-have developer productivity tool.", "🚀 In addition to that, I don't have to download and manage several different tools, hold different subscriptions, and file issues on different projects when something doesn't work. Everything is all in one place"],
+        user: { name: "Mansib Rahman", title: "CEO at Radish", image: '/images/testimonials/mansib.jpeg' }
+    },
+    {
+        header: "Great team collaboration experience",
+        say: ["Firecamp's team syncing feature has made our life's much easier. It's like google docs collaboration for your API.We were looking for an all-in-one REST, WebSockets, GraphQL Client, with real-time team syncing. That's exactly why we picked Firecamp over Postman or Insomnia Client"],
+        user: { name: "Milan", title: "CEO at Parker", image: '/images/testimonials/milan.jpeg' }
+    },
+    {
+        header: "It made my GraphQL workflow easy",
+        say: ["Currently, I'm enjoying the ability to get graphQL endpoint schemas just by clicking a button. Aside from that, the team has done a great job with the graphQL query builder. Hands down there is no better client for testing graphQL APIs."],
+        user: { name: "Duncan Nevin", title: "Software Developer", image: '/images/testimonials/duncan.jpeg' }
+    },
+    {
+        header: "The only Complete API Devtool",
+        say: ["Being a developer, testing tools are a must to me and after working with several projects (API-based as well as socket-based) I had to use several different apps to test my services.", "After being introduced to Firecamp, I was relieved from those several apps. I can do almost all kinds of testing with Firecamp and the most amazing fact is I get to share my endpoint details and socket event directly to my team without any kind of special documentation ( quite similar to postman but much simpler ). To conclude, I'm addicted to its efficiency as it helps in the enhancement of my productivity"],
+        user: { name: "Rajat", title: "Software developer", image: '/images/testimonials/rajat.jpeg' }
+    },
+];
+
 export function Testimonials() {
 
     return (
@@ -7,69 +33,33 @@ export function Testimonials() {
                     <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">
                         Listen to our users
                     </h2>
-                    <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
+                    <p className="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Team who build their APIs with Firecamp</p>
                 </div>
                 <div className="grid mb-8 lg:mb-12 lg:grid-cols-2">
-                    <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
-                            <p className="my-4">I recently got my hands on Flowbite Pro, and holy crap, I&apos;m speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme.</p>
-                            <p className="my-4">Flowbite has code in one place and I&apos;m not joking when I say it took me a matter of minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
-                            <p className="my-4">If you care for your time, I hands down would go with this.</p>
-                        </blockquote>
-                        <figcaption className="flex justify-center items-center space-x-3">
-                            <img className="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture" />
-                            <div className="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Bonnie Green</div>
-                                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                    <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
-                            <p className="my-4">FlowBite provides a robust set of design tokens and components based on the popular Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
-                            <p className="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!</p>
-                        </blockquote>
-                        <figcaption className="flex justify-center items-center space-x-3">
-                            <img className="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture" />
-                            <div className="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Roberta Casas</div>
-                                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                    <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 lg:border-b-0 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Mindblowing workflow and variants</h3>
-                            <p className="my-4">As someone who mainly designs in the browser, I&apos;ve been a casual user of Figma, but as soon as I saw and started playing with FlowBite my mind was 🤯.</p>
-                            <p className="my-4">Everything is so well structured and simple to use (I&apos;ve learnt so much about Figma by just using the toolkit).</p>
-                            <p className="my-4">Aesthetically, the well designed components are beautiful and will undoubtedly level up your next application.</p>
-                        </blockquote>
-                        <figcaption className="flex justify-center items-center space-x-3">
-                            <img className="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png" alt="profile picture" />
-                            <div className="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Jese Leos</div>
-                                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Software Engineer at Facebook</div>
-                            </div>
-                        </figcaption>
-                    </figure>
-                    <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
-                        <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Efficient Collaborating</h3>
-                            <p className="my-4">This is a very complex and beautiful set of elements. Under the hood it comes with the best things from 2 different worlds: Figma and Tailwind.</p>
-                            <p className="my-4">You have many examples that can be used to create a fast prototype for your team.</p>
-                        </blockquote>
-                        <figcaption className="flex justify-center items-center space-x-3">
-                            <img className="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png" alt="profile picture" />
-                            <div className="space-y-0.5 font-medium dark:text-white text-left">
-                                <div>Joseph McFall</div>
-                                <div className="text-sm font-light text-gray-500 dark:text-gray-400">CTO at Google</div>
-                            </div>
-                        </figcaption>
-                    </figure>
+                    {testimonials.map((t, i) => <FigureCard {...t} key={i} />)}
                 </div>
             </div>
         </section>
+    )
+}
+
+const FigureCard: FC<{ header: string, say: string[], user: { name: string, title: string, image: string, } }> = ({ header, say, user: { name, title, image } }) => {
+
+    return (
+        <figure className="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+            <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{header}</h3>
+                {
+                    say.map((s, i) => <p className="my-4" key={i}>{s}</p>)
+                }
+            </blockquote>
+            <figcaption className="flex justify-center items-center space-x-3">
+                <Image className="w-9 h-9 rounded-full" src={image} width={30} height={30} alt="profile-picture" />
+                <div className="space-y-0.5 font-medium dark:text-white text-left">
+                    <div>{name}</div>
+                    <div className="text-sm font-light text-gray-500 dark:text-gray-400">{title}</div>
+                </div>
+            </figcaption>
+        </figure>
     )
 }
