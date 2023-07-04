@@ -12,7 +12,7 @@ export function CtaSection() {
                     Let the API Campsite be your home!
                 </h2>
                 <div className="space-x-4">
-                    <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+                    <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "lg" }))} target="_blank">
                         Launch Firecamp
                     </Link>
                 </div>

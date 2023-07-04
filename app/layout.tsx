@@ -100,16 +100,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 {/* <MainNav items={marketingConfig.mainNav} /> */}
                 <NavigationMenuDemo />
                 <nav>
-                  <a
-                    href="https://firecamp.dev"
-                    target="_blank"
-                    className={cn(
-                      buttonVariants({ size: "sm" }),
-                      "px-4"
-                    )}
-                  >
+                  <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "sm" }))} target="_blank">
                     Launch Firecamp
-                  </a>
+                  </Link>
                 </nav>
               </div>
             </header>

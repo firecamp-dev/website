@@ -22,7 +22,7 @@ export function HeroFSection() {
                     Firecamp helps to build APIs 3x faster with great developer experience
                 </p>
                 <div className="space-x-4">
-                    <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+                    <Link href="/docs" className={cn(buttonVariants({ size: "lg" }))} >
                         Get Started
                     </Link>
                     <Link

@@ -17,15 +17,15 @@ export type SidebarNavItem = {
   external?: boolean
   icon?: keyof typeof Icons
 } & (
-  | {
+    | {
       href: string
       items?: never
     }
-  | {
+    | {
       href?: string
       items: NavLink[]
     }
-)
+  )
 
 export type SiteConfig = {
   name: string
@@ -33,8 +33,10 @@ export type SiteConfig = {
   url: string
   ogImage: string
   links: {
+    platform: string
     twitter: string
     github: string
+    discord: string
   }
 }
 
