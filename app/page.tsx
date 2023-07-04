@@ -39,7 +39,7 @@ export default async function IndexPage() {
     return (
         <>
             <HeroFSection />
-            <CustomerSection />
+            {/* <CustomerSection /> */}
             <FeaturesSection />
             <OssSection />
             <Testimonials />
