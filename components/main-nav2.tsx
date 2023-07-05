@@ -18,34 +18,34 @@ import {
 const components: { title: string; href: string; description: string }[] = [
     {
         title: "API Collection",
-        href: "#",
+        href: "/api-collection",
         description:
             "Manage collection as single source of truth for team collaboration",
     },
     {
         title: "API Playgrounds",
-        href: "#",
+        href: "/api-playgrounds",
         description: "Get feature reach API playgrounds for your API testing need",
     },
     {
         title: "API Collaboration",
-        href: "#",
+        href: "/api-playgrounds",
         description:
             "Use organization/workspaces to work collaboratively within team",
     },
     {
         title: "API Test Runner",
-        href: "#",
+        href: "/api-test-runner",
         description: "Run the API Collection in runner visually",
     },
     {
         title: "CLI & CI/CD",
-        href: "#",
+        href: "/cli",
         description: "Run the collection in terminal or run in CI/CD pipeline",
     },
     {
         title: "API Documentation",
-        href: "#",
+        href: "/api-documentation",
         description: "Publish a beautiful API documentation for team or community",
     },
 ]

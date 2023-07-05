@@ -16,11 +16,11 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     <FooterList
                         name="Product"
                         links={[
-                            { link: "", name: "API Playgrounds" },
-                            { link: "", name: "API Collaboration" },
-                            { link: "#", name: "API Collection" },
-                            { link: "#", name: "API Test Runner" },
-                            { link: "#", name: "API Documentation" },
+                            { link: "/api-playgrounds", name: "API Playgrounds" },
+                            { link: "/api-collaboration", name: "API Collaboration" },
+                            { link: "/api-collection", name: "API Collection" },
+                            { link: "/api-test-runner", name: "API Test Runner" },
+                            { link: "/api-documentation", name: "API Documentation" },
                         ]}
                     />
 
@@ -110,7 +110,7 @@ const FooterIcon: React.FC<any> = ({ link, svg, name }) => {
 const FooterList: React.FC<any> = ({ name, links }) => {
     return (
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">{name}</h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">{name}</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 {links.map((l: any, i: number) => <FooterLink key={i} link={l.link} name={l.name} />)}
             </ul>
