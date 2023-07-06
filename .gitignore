@@ -36,3 +36,8 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+# robots and sitemap will generate on build time
+public/robots.txt
+public/sitemap-*.xml
+public/sitemap.xml
