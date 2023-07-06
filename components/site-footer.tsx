@@ -53,9 +53,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     <FooterList
                         name="Legal"
                         links={[
-                            { link: "/legals/privacy-policy", name: "Privacy Policy" },
-                            { link: "/legals/terms-and-conditions", name: "Terms & Conditions" },
-                            { link: "/legals/cookie", name: "Cookie" },
+                            { link: "/legal/privacy-policy", name: "Privacy Policy" },
+                            { link: "/legal/terms-and-conditions", name: "Terms & Conditions" },
+                            { link: "/legal/cookie", name: "Cookie" },
                         ]}
                     />
                 </div>
