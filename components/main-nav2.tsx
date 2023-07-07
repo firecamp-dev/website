@@ -14,6 +14,7 @@ import {
     NavigationMenuTrigger,
     navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import Image from "next/image"
 
 const components: { title: string; href: string; description: string }[] = [
     {
@@ -54,10 +55,11 @@ export function NavigationMenuDemo() {
     return (
         <>
             <Link href="/" className="hidden items-center space-x-2 md:flex">
-                <Icons.logo />
+                {/* <Icons.logo /> */}
+                <Image src="/logo/fc-full.svg" alt="logo" width={150} height={50} />
                 <span className="hidden font-bold sm:inline-block">
                     {/* {siteConfig.name} */}
-                    Firecamp
+                    {/* Firecamp */}
                 </span>
             </Link>
             <NavigationMenu>
