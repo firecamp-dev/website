@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
-import { NavigationMenuDemo } from "@/components/main-nav2"
+import { NavMenu } from "@/components/main-nav2"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -98,9 +98,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header className="container z-40 bg-background">
               <div className="flex h-20 items-center justify-between py-6">
                 {/* <MainNav items={marketingConfig.mainNav} /> */}
-                <NavigationMenuDemo />
+                <NavMenu />
                 <nav>
-                  <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "sm" }))} target="_blank">
+                  <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "sm" }), 'invisible', 'sm:visible')} target="_blank">
                     Launch Firecamp
                   </Link>
                 </nav>

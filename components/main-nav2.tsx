@@ -51,7 +51,7 @@ const components: { title: string; href: string; description: string }[] = [
     },
 ]
 
-export function NavigationMenuDemo() {
+export function NavMenu() {
     return (
         <>
             <Link href="/" className="hidden items-center space-x-2 md:flex">
