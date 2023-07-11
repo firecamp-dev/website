@@ -70,7 +70,7 @@ const PricingBox: FC<{
                         {price.monthly}
                     </p>
                 </div>
-                <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
+                <Link href="https://firecamp.dev" className={cn(buttonVariants({ size: "lg" }))}>
                     Get Started
                 </Link>
             </div>
