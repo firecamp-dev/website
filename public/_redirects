@@ -1,0 +1,2 @@
+/doc/*  https://firecamp-product-document.netlify.app/:splat  200
+/docs/*   https://firecamp-documentation.netlify.app/docs/:splat  200
