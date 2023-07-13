@@ -26,7 +26,7 @@ export default async function BlogPage() {
             Blog
           </h1>
           <p className="text-xl text-muted-foreground">
-            A blog built using Contentlayer. Posts are written in MDX.
+            Firecamp Blog, Everything knowledge about APIs
           </p>
         </div>
       </div>
