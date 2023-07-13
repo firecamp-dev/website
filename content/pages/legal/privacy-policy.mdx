@@ -1,9 +1,7 @@
-import { MDXProvider } from '@mdx-js/react'
-import { Paragraph, Heading1, Heading3, UnorderedList } from '@/templates/MdxElement';
-import {
-  LayoutWrapperContentDiv,
-  LayoutWrapperDiv,
-} from '@/templates/StyledLayout';
+---
+title: Privacy Policy
+description: Read the Firecamp Privacy and Policy
+---
 
 # Privacy Policy 
 
@@ -191,21 +189,3 @@ C3/1203, Nakhstra Nebula, Jahangirpura, Surat, Gujarat, India 395005 Email : adm
 
 ### Changes​
 March 1, 2023
-
-
-export default ({ children }) => {
-  return (<MDXProvider components={{
-    p: Paragraph,
-    h3: Heading3,
-    h1: Heading1, ul: UnorderedList,
-  }}>
-
-    <LayoutWrapperDiv>
-      <LayoutWrapperContentDiv css={{ mx: '$9', my: '$0' }}>
-        {children}
-      </LayoutWrapperContentDiv>
-    </LayoutWrapperDiv>
-
-  </MDXProvider>
-  )
-}
