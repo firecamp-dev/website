@@ -1,0 +1,118 @@
+---
+title: "Changelog #001: Firecamp 3.0, The web app launched"
+date: "2023-07-12"
+description: "Checkout what's new in Firecamp 3.0"
+published: true
+type: Post
+image: /images/blog/1/cover.png
+authors:
+  - nishchit
+---
+
+# Release Note TOC
+ 1. Introduction
+ 2. Dedicated Playgrounds for each protocol (Truly Multi-protocol)
+ 3. Postman Compatibility
+ 4. Breaking Changes
+ 5. Migration Guide (Firecamp 2 -> 3)
+ 6. Deprecation Chrome Extension
+ 7. Roadmap (Future of Firecamp)
+
+
+## 1. Introduction
+Firecamp version 3 marks the beginning of our journey as a web-based platform. This release represents a complete rewrite from the ground up, enabling us to support multiple protocols and significantly improve the platform's foundation. The re-architecture ensures that Firecamp becomes more versatile and extensible, setting the stage for exciting possibilities in the future.
+
+## 2. Dedicated Playgrounds for each protocol (Truly Multi-protocol)
+### Rest Playground
+- Developer Experience Improvements
+- Headers/Params, Count and Table view improvements
+- Pre-request and Test scripts are now postman compatible
+- Response UI has been optimized
+
+[Read the doc](https://firecamp.io/docs/rest/introduction)
+
+### GraphQL Playground
+- Collection of playgrounds introduced
+- Query Explorer UI improved
+- Multi-tabs playgrounds are introduced
+      - Now you can test and debug multiple qra[hql queries with multiple tabs within the same tab
+- Response panel has been improved
+
+[Read the doc](https://firecamp.io/docs/graphql/introduction)
+ 
+### WebSocket Playground
+- Message Collection has been introduced
+- Playground (Type and Send Message) experience has been changed
+- Event Logs and Log preview improvements
+
+[Read the doc](https://firecamp.io/docs/websocket/introduction)
+
+### SocketIO Playground
+- Emitter Collection has been introduced
+- Playground (Type and Send Emitter) experience has been changed
+- Event Logs and Log preview improvements
+
+[Read the doc](https://firecamp.io/docs/socket-io/introduction)
+
+## 3. Postman Compatibility
+Firecamp 3.0 brings full compatibility with Postman, ensuring a smooth transition for users familiar with PM's environment variables, global variables, collection variables, and scripts. We have worked diligently to align Firecamp's scripting capabilities with PM's scripting paradigm, allowing users to leverage their existing knowledge and scripts effortlessly.
+
+3.1. Environment Variables
+3.2. Globals
+3.3. Collection Variables
+3.4. Scripts (Pre-request and Tests):
+
+### 3.1 Environment Variables:
+Introducing Environment Variables, Firecamp 3.0 allows you to define and utilize variables throughout your workspace. The Environment variables allow you to create sets of variables specific to a particular environment. This flexibility empowers you to streamline your workflow and maintain consistency across your requests.
+[Read the doc](https://firecamp.io/docs/platform/environment)
+
+### 3.2 Globals:
+With Firecamp 3.0, you can define Global variables within your workspace. These variables can be accessed and reused in any request or collection within the same workspace, enabling you to centralize commonly used values and configurations. By utilizing globals, you can efficiently manage and update shared variables across the workspace scope.
+
+### 3.3 Collection Variables:
+In addition, Firecamp 3.0 supports collection variables. Collection variables are specific to a particular collection and can be used across multiple requests within that collection. This feature enables you to organize and maintain variables at the collection level, further enhancing the modularity and reusability of your requests.
+
+### 3.4 Scripts (Pre-request and Tests):
+Firecamp 3.0 introduces enhanced scripting capabilities that are the most compatible with Postman's scripts. You can now write pre-request scripts and tests using the familiar PM's scripting syntax within Firecamp. This compatibility ensures a seamless transition for users accustomed to writing scripts in Postman, allowing them to leverage their existing knowledge and effortlessly migrate their scripts to Firecamp. However, we're improving this feature based on community feedback. You can share your feedback on GitHub.
+[Read the doc](https://firecamp.io/docs/platform/scripts)
+
+
+## 4. Breaking changes
+### Cross-app collaboration
+We have re-architectured the Firecamp to be a web-first and truly multi-protocol platform. To enhance team collaboration, the desktop version (v2) is no longer compatible. We encourage teams currently on v2 to transition to Firecamp v3 for a smoother collaborative experience. Don't worry, your data remains unaffected. Need help to move? Reach out to us on Discord. Upgrade to Firecamp v3 and enjoy seamless collaboration!
+
+
+### Environment
+- Collection-level and Workspace-level environments are no longer supported
+Previously created environments will be shown in your account, and you can clone them instantly into environment variables
+    - step-1 click on the environment Icon to open the sidebar, 
+    - step-2 at the bottom of the sidebar, you'll have your old environments. you can clone from there.
+
+### Scripts
+The Firecamp v2 scripts are no longer supported, New Firecamp scripts are now most compatible with Postman Scripts. We understand the importance of maintaining compatibility and reducing friction when transitioning between tools. By aligning Firecamp with Postman's scripting capabilities, we aim to provide a familiar and seamless experience for both existing Postman users and new users looking to benefit from Firecamp's multi-protocol capabilities.
+
+## 5. Migration Guide (Firecamp 2.0 -> 3.0)
+With this release, there is **no manual migration required**. Simply visit the Firecamp website at https://firecamp.dev/, sign in to your account, and you will have immediate access to all your existing workspaces and collections. Additionally, stay tuned for the upcoming release of the Firecamp 3.0 Desktop version, which will further expand the capabilities of the platform.
+1. Visit https://firecamp.dev/ and sign in.
+2. All your workspaces and collections will be accessible. If you're missing anything please contacts us on Discord.
+3. Desktop version coming soon.
+
+##  6. Deprecation Chrome Extension
+As part of the transition to Firecamp 3.0, we have decided to deprecate the Firecamp Chrome extension. Instead, we are focusing our efforts on delivering an enhanced web experience. Starting from **October 1st, 2023**, the Firecamp Chrome extension will no longer be available. We apologize for any inconvenience caused and encourage you to switch to the web version for continued access to Firecamp's features.
+
+## 7. Roadmap: Future of Firecamp
+
+Firecamp is evolving into a one-stop, feature-rich platform, aiming to become the most complete OpenSource Platform for API development. By starting the **OpenSOurce** journey, the future roadmap includes the introduction of 
+
+1. **Cutting-edge AI-powered capabilities**
+2. A user-friendly CLI tool
+3. An advanced API test runner
+4. A versatile built-in proxy
+5. Robust SSL support
+6. Seamless history tracking
+7. Improved developer experience
+8. Enhanced API documentation, and 
+9. Seamless integration with CI/CD workflows
+10. Undisclosed Platform Phase-2
+
+These upcoming features will transform Firecamp into the ultimate destination for developers, offering a best-in-class development experience and a feature-rich API environment. 
