@@ -1,12 +1,14 @@
+import { FC } from "react"
 import Link from "next/link"
 
+import { Seo } from "@/config/seo"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
-import { FC } from "react"
 
 export const metadata = {
-    title: "Pricing",
+    title: Seo.pricing.title,
+    description: Seo.pricing.description
 }
 
 export default function PricingPage() {
