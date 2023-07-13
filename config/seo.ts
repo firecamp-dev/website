@@ -1,4 +1,4 @@
-const image = "https://www.firecamp.io/images/og.png";
+const image = "https://www.firecamp.io/og.png";
 export const Seo: any = {
     "home": {
         "title": "Firecamp - Get instant API playgrounds to test Rest, GraphQL, WebSocket and SocketIO APIs",
