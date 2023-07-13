@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import "@/styles/globals.css"
 import { siteConfig } from "@/config/site"
+import { Seo } from "@/config/seo"
 import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -18,12 +19,10 @@ import { NavMenu } from "@/components/main-nav2"
 interface MarketingLayoutProps {
   children: React.ReactNode
 }
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
-
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../assets/fonts/CalSans-SemiBold.woff2",
@@ -36,13 +35,14 @@ interface RootLayoutProps {
 
 export const metadata = {
   title: {
-    default: siteConfig.name,
+    default: Seo.home.title,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: Seo.home.description,
   keywords: [
+    "API DevTool",
     "API Testing",
-    "POstman Alternative",
+    "Postman Alternative",
     "API Devtool",
     "API Clients",
     "Open Source",
@@ -61,25 +61,25 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-    images: [`${siteConfig.url}/og.png`],
+    url: Seo.home.url,
+    title: Seo.home.title,
+    description: Seo.home.description,
+    siteName: Seo.home.siteName,
+    images: [Seo.home.image],
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og.png`],
-    creator: "@Nishchit14",
+    title: Seo.home.title,
+    description: Seo.home.description,
+    images: [Seo.home.image],
+    creator: Seo.home.creatorName,
   },
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
     apple: "/favicon.png",
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: `${Seo.home.url}/site.webmanifest`,
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
