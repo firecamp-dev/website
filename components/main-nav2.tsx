@@ -30,7 +30,7 @@ const components: { title: string; href: string; description: string }[] = [
     },
     {
         title: "API Collaboration",
-        href: "/api-playgrounds",
+        href: "/api-collaboration",
         description:
             "Use organization/workspaces to work collaboratively within team",
     },
@@ -56,7 +56,7 @@ export function NavMenu() {
         <>
             <Link href="/" className="hidden items-center space-x-2 md:flex">
                 {/* <Icons.logo /> */}
-                <Image src="/logo/fc-full.svg" alt="logo" width={150} height={50} />
+                <Image src="/logo/fc-full.svg" alt="Firecamp Logo" width={180} height={50} />
                 <span className="hidden font-bold sm:inline-block">
                     {/* {siteConfig.name} */}
                     {/* Firecamp */}
