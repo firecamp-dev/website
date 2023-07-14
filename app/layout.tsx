@@ -75,9 +75,9 @@ export const metadata = {
     creator: Seo.home.creatorName,
   },
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   manifest: `${Seo.home.url}/site.webmanifest`,
 }
