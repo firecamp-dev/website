@@ -46,7 +46,7 @@ export async function generateMetadata({
   ogUrl.searchParams.set("type", "Blog Post")
   ogUrl.searchParams.set("mode", "dark")
 
-  return {
+  const postMeta: Metadata = {
     title: post.title,
     description: post.description,
     authors: post.authors.map((author) => ({
@@ -71,8 +71,14 @@ export async function generateMetadata({
       title: post.title,
       description: post.description,
       images: [ogUrl.toString()],
-    },
+    }
   }
+  if (post.canonical) {
+    postMeta.alternates = {
+      canonical: post.canonical
+    }
+  }
+  return postMeta
 }
 
 export async function generateStaticParams(): Promise<
