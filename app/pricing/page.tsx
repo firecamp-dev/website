@@ -30,7 +30,7 @@ export default function PricingPage() {
                 features={["All Free features plus", "15 team members", "24*7 Support on a priority", "Team Management Resources"]} />
 
             <div className="mx-auto flex w-full max-w-[58rem] flex-col gap-4">
-                <a href="https://tally.so/r/mRxW14Í" target="_blank" className="max-w-[85%] leading-normal font-bold underline text-muted-foreground sm:leading-7" >Contact us for more than 15 users?</a>
+                <span><a href="https://tally.so/r/mRxW14" target="_blank" className="max-w-[85%] leading-normal font-bold underline text-muted-foreground sm:leading-7" >Contact us </a> for more than 15 users</span>
             </div>
         </section>
     )
