@@ -11,7 +11,7 @@ export function OssSection() {
                     Embrace the Power of Open Source with Pride
                 </h2>
                 <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                    We believe in the power of collaboration and community. That&apos;s why we&apos;re excited to announce that starting from the <span className="font-bold underline">15th of August</span>, we will proudly be open source!
+                    We believe in the power of collaboration and community. and that&apos;s why we&apos;re proudly open source!
                     <Link
                         href={siteConfig.links.github}
                         target="_blank"
@@ -22,7 +22,6 @@ export function OssSection() {
                     </Link>
                     .{" "}
                 </p>
-                <p>Stay tuned for the big day on the 15th of August when we open our doors to the world of open source!</p>
                 {
                     <Link
                         href={siteConfig.links.github}
