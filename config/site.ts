@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   links: {
     platform: "https://firecamp.dev",
     twitter: "https://twitter.com/FirecampDev",
-    github: "https://github.com/firecamp-dev/Firecamp",
+    github: "https://github.com/firecamp-dev/firecamp",
     discord: "https://discord.com/invite/8hRaqhK",
   },
 }
