@@ -2,7 +2,31 @@ import React from "react";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
 
-export function OssSection() {
+async function getGitHubStars(): Promise<string | null> {
+    try {
+        const response = await fetch(
+            "https://api.github.com/repos/firecamp-dev/firecamp",
+            {
+                headers: {
+                    Accept: "application/vnd.github+json",
+                    // Authorization: `Bearer ${env.GITHUB_ACCESS_TOKEN}`,
+                },
+                next: {
+                    revalidate: 60,
+                },
+            }
+        )
+        if (!response?.ok) return null;
+        const json = await response.json()
+        return parseInt(json["stargazers_count"]).toLocaleString()
+    } catch (error) {
+        return null
+    }
+}
+
+export async function OssSection() {
+
+    const stars = await getGitHubStars()
 
     return (
         <section id="open-source" className="container py-8 md:py-12 lg:py-24">
@@ -11,16 +35,9 @@ export function OssSection() {
                     Embrace the Power of Open Source with Pride
                 </h2>
                 <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                    We believe in the power of collaboration and community. and that&apos;s why we&apos;re proudly open source!
-                    <Link
-                        href={siteConfig.links.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline underline-offset-4"
-                    >
-                        GitHub
-                    </Link>
-                    .{" "}
+                    We believe in the power of collaboration and community. and that&apos;s why
+                    <br />
+                    we&apos;re proudly <span className="font-bold">open-source!</span>
                 </p>
                 {
                     <Link
@@ -41,9 +58,8 @@ export function OssSection() {
                         </div>
                         <div className="flex items-center">
                             <div className="h-4 w-4 border-y-8 border-l-0 border-r-8 border-solid border-muted border-y-transparent"></div>
-                            <div className="flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-medium">
-                                {/* {stars} stars on GitHub */}
-                                GitHub
+                            <div className="flex h-10 items-center rounded-md border border-muted bg-muted px-4 font-bold">
+                                {stars} Stars on GitHub
                             </div>
                         </div>
                     </Link>

@@ -102,7 +102,7 @@ export async function GET(req: Request) {
                   stroke-linejoin="round"
                 />
               </svg>
-              <div tw="flex ml-2">github.com/firecampdev/firecamp</div>
+              <div tw="flex ml-2">github.com/firecamp-dev/firecamp</div>
             </div>
           </div>
         </div>

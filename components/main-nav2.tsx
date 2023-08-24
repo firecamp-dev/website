@@ -133,6 +133,13 @@ export function NavMenu() {
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <Link href="https://github.com/firecamp-dev/firecamp" legacyBehavior target="_blank">
+                            <NavigationMenuLink className={navigationMenuTriggerStyle({ className: "text-foreground/60" })}>
+                                <img alt="Firecamp GitHub Stars" src="https://img.shields.io/github/stars/firecampdev/firecamp?style=flat&logo=github&label=Star%20Us&labelColor=%230F172A&color=%23fff&cacheSeconds=300" style={{ height: '24px' }} />
+                            </NavigationMenuLink>
+                        </Link>
+                    </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
         </>
