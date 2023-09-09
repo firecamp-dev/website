@@ -2,7 +2,7 @@
   "rewrites": [
     {
         "source": "/docs/:match*",
-        "destination": "https://firecamp-documentation.vercel.app/:match*"
+        "destination": "https://firecamp-documentation.vercel.app/docs/:match*"
     }
   ]
 }
