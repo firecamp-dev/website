@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-        "source": "/docs/:match*",
-        "destination": "https://google.com"
+        "source": "/docs",
+        "destination": "https://firecamp-documentation.vercel.app/docs*"
     }
   ]
 }
