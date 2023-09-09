@@ -2,7 +2,7 @@
   "rewrites": [
     {
         "source": "/docs",
-        "destination": "https://firecamp-documentation.vercel.app/docs*"
+        "destination": "https://firecamp-documentation.vercel.app/docs"
     }
   ]
 }
