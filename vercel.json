@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    {"source": "/docs/", "destination": "https://firecamp-documentation.vercel.app"}
+    {
+        "source": "/docs/:match*",
+        "destination": "https://firecamp-documentation.vercel.app/:match*"
+    }
   ]
 }
