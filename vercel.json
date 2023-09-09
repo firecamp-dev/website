@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    {"source": "/docs/", "destination": "firecamp-documentation.vercel.app"},
+    {"source": "/", "destination": "firecamp-io.vercel.app"}
+  ]
+}
