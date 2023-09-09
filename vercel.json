@@ -3,6 +3,11 @@
     {
         "source": "/docs",
         "destination": "https://firecamp-documentation.vercel.app/docs"
+    },
+    {
+        "source": "/docs/:match*",
+        "destination": "https://firecamp-documentation.vercel.app/docs/:match*"
     }
+
   ]
 }
