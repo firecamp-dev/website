@@ -45,7 +45,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     <FooterList
                         name="Community"
                         links={[
-                            { link: siteConfig.links.github, name: "Github" },
+                            { link: siteConfig.links.github, name: "GitHub" },
                             { link: siteConfig.links.twitter, name: "Twitter" },
                             { link: siteConfig.links.discord, name: "Discord Server" },
                         ]}
