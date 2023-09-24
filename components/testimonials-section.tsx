@@ -55,7 +55,7 @@ export function Testimonials() {
 const FigureCard: FC<{ className: string, header: string, say: string[], user: { name: string, title: string, image: string, } }> = ({ className, header, say, user: { name, title, image } }) => {
 
     return (
-        <figure className={clsx(className, "flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700")}>
+        <figure className={clsx(className, "flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700 justify-between")}>
             <blockquote className="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{header}</h3>
                 {
