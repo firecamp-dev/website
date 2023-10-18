@@ -1,17 +1,18 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
 
-type OSSFriend = {
+
+type TOSSFriend = {
     href: string;
     name: string;
     description: string;
 };
 
 // Mock Array from API
-const ossFriendsArray: OSSFriend[] = [
+const ossFriends: TOSSFriend[] = [
     {
         name: "Appsmith",
         description: "Build build custom software on top of your data.",
@@ -194,12 +195,12 @@ const ossFriendsArray: OSSFriend[] = [
 export default function OSSFriendsPage() {
     return (
         <section>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mt-10 sm:mt-16 md:mt-24">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-700 dark:text-zinc-300 text-center mt-10 sm:mt-16 md:mt-24">
                 Our Open-source Friends
             </h1>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-4 sm:px-8 md:px-16 my-10 sm:my-12 md:my-28">
-                {ossFriendsArray.map((data) => (
+                {ossFriends.map((data: TOSSFriend) => (
                     <div
                         key={data.href}
                         className="border-2 border-zinc-600 p-6 rounded-xl"
@@ -215,5 +216,3 @@ export default function OSSFriendsPage() {
         </section>
     );
 }
-
-// https://formbricks.com/api/oss-friends
