@@ -35,6 +35,7 @@ export type SiteConfig = {
     twitter: string
     github: string
     discord: string
+    ossFriends: string
   }
 }
 
