@@ -8,5 +8,6 @@ export const siteConfig: SiteConfig = {
     twitter: "https://twitter.com/FirecampDev",
     github: "https://github.com/firecamp-dev/firecamp",
     discord: "https://discord.com/invite/8hRaqhK",
+    oss_friends: "https://firecamp.io/oss-friends",
   },
 }
