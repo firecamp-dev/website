@@ -11,10 +11,16 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
+import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { NavMenu } from "@/components/main-nav2"
+import { Separator } from "@/components/ui/separator"
+import { NavPlaygrounds } from "@/components/nav-playgrounds"
+import { NavProducts } from "@/components/nav-products"
+
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -96,16 +102,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 
           <div className="flex min-h-screen flex-col">
-            <header className="container z-40 bg-background">
-              <div className="flex h-20 items-center justify-between py-6">
-                {/* <MainNav items={marketingConfig.mainNav} /> */}
-                <NavMenu />
-                <nav>
-                  <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "sm" }), 'invisible', 'sm:visible')} target="_blank">
-                    Launch Firecamp
-                  </Link>
-                </nav>
-              </div>
+            <header className="px-3 sm:px-10 z-40 bg-background flex items-center justify-between py-6">
+              {/* <div className="flex h-20 items-center justify-between py-6"> */}
+              {/* <MainNav items={marketingConfig.mainNav} /> */}
+              <NavMenu />
+              <nav className="flex flex-row items-center justify-center gap-x-1 sm:gap-x-3">
+                <Link
+                  href={siteConfig.links.platform}
+                  className={cn(buttonVariants({ size: "sm" }), 'scale-[85%] sm:scale-100')}
+                  target="_blank"
+                >
+                  Launch Firecamp
+                </Link>
+                <HamburgerMenu />
+              </nav>
+              {/* </div> */}
             </header>
             <main className="flex-1">{children}</main>
             <SiteFooter />
@@ -119,3 +130,51 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
+
+
+const links: { href: string, title: string }[] = [
+  {
+    title: "Documentation",
+    href: "/docs"
+  },
+  {
+    title: "Pricing",
+    href: "/pricing"
+  },
+  {
+    title: "Blogs",
+    href: "/blogs"
+  },
+]
+
+function HamburgerMenu() {
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Icons.hamburger className="block lg:hidden" />
+      </SheetTrigger>
+      <SheetContent className="overflow-y-scroll py-10 px-2">
+        <NavPlaygrounds />
+
+        <Separator className="my-5 h-2" />
+
+        <NavProducts />
+
+        <Separator className="my-5 h-2" />
+
+        <div className="flex flex-col gap-5 sm:gap-7">
+          {links.map((link) => (
+            <SheetClose className="text-left">
+              <Link
+                href={link.href}
+                className="text-[1.75rem] sm:text-4xl font-bold"
+              >
+                {link.title}
+              </Link>
+            </SheetClose>
+          ))}
+        </div>
+      </SheetContent>
+    </Sheet>
+  )
+} 
