@@ -1,6 +1,6 @@
 import Script from 'next/script'
  
-export function Analytics() {
+export function GAnalytics() {
   return (
     <div className="container">
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
