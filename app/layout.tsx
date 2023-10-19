@@ -100,10 +100,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-
           <div className="flex min-h-screen flex-col">
             <header className="px-3 sm:px-10 z-40 bg-background flex items-center justify-between py-6">
-              {/* <div className="flex h-20 items-center justify-between py-6"> */}
               {/* <MainNav items={marketingConfig.mainNav} /> */}
               <NavMenu />
               <nav className="flex flex-row items-center justify-center gap-x-1 sm:gap-x-3">
@@ -116,12 +114,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 </Link>
                 <HamburgerMenu />
               </nav>
-              {/* </div> */}
             </header>
             <main className="flex-1">{children}</main>
             <SiteFooter />
           </div>
-
           <Analytics />
           <Toaster />
           <TailwindIndicator />
