@@ -15,6 +15,7 @@ import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { NavMenu } from "@/components/main-nav2"
+import { GAnalytics } from "@/components/GAnalytics"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -111,6 +112,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <SiteFooter />
           </div>
 
+          <GAnalytics />
           <Analytics />
           <Toaster />
           <TailwindIndicator />
