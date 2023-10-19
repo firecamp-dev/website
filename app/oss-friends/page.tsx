@@ -33,7 +33,7 @@ export default async function OSSFriendsPage() {
     );
 }
 
-export async function getOssFriends() {
+async function getOssFriends() {
     const res = await fetch("https://formbricks.com/api/oss-friends");
     return await res.json();
 }
