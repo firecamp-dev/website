@@ -164,7 +164,7 @@ function HamburgerMenu() {
 
         <div className="flex flex-col gap-5 sm:gap-7">
           {links.map((link) => (
-            <SheetClose className="text-left">
+            <SheetClose className="text-left" key={link.href}>
               <Link
                 href={link.href}
                 className="text-[1.75rem] sm:text-4xl font-bold"
