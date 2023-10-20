@@ -80,7 +80,7 @@ export default function HamburgerMenu() {
           <Divider />
           <List>
             {links.map((link) => (
-              <ListItem className="my-5">
+              <ListItem className="my-5" key={link.href}>
                 <Link href={link.href} className="text-4xl font-bold">
                   {link.title}
                 </Link>
