@@ -54,15 +54,21 @@ const components: { title: string; href: string; description: string }[] = [
 export function NavMenu() {
     return (
         <>
-            <Link href="/" className="hidden items-center space-x-2 md:flex">
+            <Link href="/" className="mt-0 sm:mt-5">
                 {/* <Icons.logo /> */}
-                <Image src="/logo/fc-full.svg" alt="Firecamp Logo" width={180} height={50} />
+                <Image
+                    src="/logo/fc-full.svg"
+                    alt="Firecamp Logo"
+                    width={180}
+                    height={50}
+                    className="scale-75 sm:scale-100"
+                />
                 <span className="hidden font-bold sm:inline-block">
                     {/* {siteConfig.name} */}
                     {/* Firecamp */}
                 </span>
             </Link>
-            <NavigationMenu>
+            <NavigationMenu className="hidden lg:block">
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className="transition-colors hover:text-foreground/80 sm:text-sm">Playgrounds</NavigationMenuTrigger>

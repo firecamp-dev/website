@@ -13,8 +13,9 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
-import { SiteFooter } from "@/components/site-footer"
 import { NavMenu } from "@/components/main-nav2"
+import { SiteFooter } from "@/components/site-footer"
+import HamburgerMenu from "@/components/hamburger-menu-navbar"
 import { GAnalytics } from "@/components/GAnalytics"
 
 interface MarketingLayoutProps {
@@ -95,22 +96,25 @@ export default function RootLayout({ children }: RootLayoutProps) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-
           <div className="flex min-h-screen flex-col">
-            <header className="container z-40 bg-background">
-              <div className="flex h-20 items-center justify-between py-6">
-                {/* <MainNav items={marketingConfig.mainNav} /> */}
-                <NavMenu />
-                <nav>
-                  <Link href={siteConfig.links.platform} className={cn(buttonVariants({ size: "sm" }), 'invisible', 'sm:visible')} target="_blank">
-                    Launch Firecamp
-                  </Link>
-                </nav>
-              </div>
+            <header className="px-3 sm:px-10 z-40 bg-background flex items-center justify-between py-6">
+              {/* <MainNav items={marketingConfig.mainNav} /> */}
+              <NavMenu />
+              <nav className="flex flex-row items-center justify-center gap-x-1 sm:gap-x-3">
+                <Link
+                  href={siteConfig.links.platform}
+                  className={cn(buttonVariants({ size: "sm" }), 'scale-[85%] sm:scale-100')}
+                  target="_blank"
+                >
+                  Launch Firecamp
+                </Link>
+                <HamburgerMenu />
+              </nav>
             </header>
             <main className="flex-1">{children}</main>
             <SiteFooter />
           </div>
+
 
           <GAnalytics />
           <Analytics />

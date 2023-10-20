@@ -1,4 +1,5 @@
 import {
+    Menu,
     AlertTriangle,
     ArrowRight,
     Check,
@@ -50,6 +51,7 @@ import {
     sun: SunMedium,
     moon: Moon,
     laptop: Laptop,
+    hamburger: Menu,
     gitHub: ({ ...props }: LucideProps) => (
       <svg
         aria-hidden="true"
