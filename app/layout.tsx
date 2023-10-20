@@ -11,15 +11,11 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
 import { buttonVariants } from "@/components/ui/button"
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { MainNav } from "@/components/main-nav"
 import { NavMenu } from "@/components/main-nav2"
-import { Separator } from "@/components/ui/separator"
 import { SiteFooter } from "@/components/site-footer"
-import { NavPlaygrounds } from "@/components/nav-playgrounds"
-import { NavProducts } from "@/components/nav-products"
+import HamburgerMenu from "@/components/hamburger-menu-navbar"
 
 
 interface MarketingLayoutProps {
@@ -126,51 +122,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
-
-
-const links: { href: string, title: string }[] = [
-  {
-    title: "Documentation",
-    href: "/docs"
-  },
-  {
-    title: "Pricing",
-    href: "/pricing"
-  },
-  {
-    title: "Blogs",
-    href: "/blogs"
-  },
-]
-
-function HamburgerMenu() {
-  return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Icons.hamburger className="block lg:hidden" />
-      </SheetTrigger>
-      <SheetContent className="overflow-y-scroll py-10 px-2">
-        <NavPlaygrounds />
-
-        <Separator className="my-5 h-2" />
-
-        <NavProducts />
-
-        <Separator className="my-5 h-2" />
-
-        <div className="flex flex-col gap-5 sm:gap-7">
-          {links.map((link) => (
-            <SheetClose className="text-left" key={link.href}>
-              <Link
-                href={link.href}
-                className="text-[1.75rem] sm:text-4xl font-bold"
-              >
-                {link.title}
-              </Link>
-            </SheetClose>
-          ))}
-        </div>
-      </SheetContent>
-    </Sheet>
-  )
-} 

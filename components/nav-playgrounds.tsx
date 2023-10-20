@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SheetClose } from "./ui/sheet";
+import { Close } from "@radix-ui/react-dialog";
 
 const navPlaygroundsComponents: { title: string; href: string; description: string }[] = [
   {
@@ -19,22 +19,23 @@ const navPlaygroundsComponents: { title: string; href: string; description: stri
   }
 ]
 
+
 export function NavPlaygrounds() {
   return (
     <>
-      <h1 className="text-3xl sm:text-4xl font-bold">Playgrounds</h1>
+      <h1 className="text-3xl dark:text-black sm:text-4xl font-bold">Playgrounds</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 dark:text-white overflow-y-scroll py-8 mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 dark:text-black overflow-y-scroll py-8 mx-auto">
         {navPlaygroundsComponents.map((component) => (
           <Link
             key={component.href}
             href={component.href}
             className="text-center border-2 border-zinc-600 dark:border-zinc-500 py-3 px-1 rounded-xl space-y-2"
           >
-            <SheetClose>
+            <Close>
               <h2 className="font-bold text-md md:text-lg">{component.title}</h2>
-              <p className="text-xs sm:text-sm dark:text-zinc-400">{component.description}</p>
-            </SheetClose>
+              <p className="text-xs sm:text-sm dark:text-zinc-500">{component.description}</p>
+            </Close>
           </Link>
         ))}
       </div>
