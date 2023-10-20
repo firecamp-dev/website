@@ -16,7 +16,7 @@ import { MainNav } from "@/components/main-nav"
 import { NavMenu } from "@/components/main-nav2"
 import { SiteFooter } from "@/components/site-footer"
 import HamburgerMenu from "@/components/hamburger-menu-navbar"
-
+import { GAnalytics } from "@/components/GAnalytics"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -114,6 +114,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <main className="flex-1">{children}</main>
             <SiteFooter />
           </div>
+
+
+          <GAnalytics />
           <Analytics />
           <Toaster />
           <TailwindIndicator />
