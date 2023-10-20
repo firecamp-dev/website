@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Close } from "@radix-ui/react-dialog";
+import { ListItem } from "@mui/material";
+
 
 const navPlaygroundsComponents: { title: string; href: string; description: string }[] = [
   {
@@ -25,18 +26,17 @@ export function NavPlaygrounds() {
     <>
       <h1 className="text-3xl dark:text-black sm:text-4xl font-bold">Playgrounds</h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:gap-4 dark:text-black overflow-y-scroll py-8 mx-auto">
+      <div className="dark:text-black overflow-y-scroll py-8 mx-auto">
         {navPlaygroundsComponents.map((component) => (
-          <Link
-            key={component.href}
-            href={component.href}
-            className="text-center border-2 border-zinc-600 dark:border-zinc-500 py-3 px-1 rounded-xl space-y-2"
-          >
-            <Close>
+          <ListItem key={component.href}>
+            <Link
+              href={component.href}
+              className="w-full text-center border-2 border-zinc-600 dark:border-zinc-500 py-3 px-1 rounded-xl space-y-2"
+            >
               <h2 className="font-bold text-md md:text-lg">{component.title}</h2>
               <p className="text-xs sm:text-sm dark:text-zinc-500">{component.description}</p>
-            </Close>
-          </Link>
+            </Link>
+          </ListItem>
         ))}
       </div>
     </>
