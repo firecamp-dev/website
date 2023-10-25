@@ -31,7 +31,7 @@ export function HeroFSection() {
                         </div>
                     </div>
                 </Link>
-                <h1 className="font-heading text-3xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-slate-500 to-slate-900 bg-clip-text text-transparent">
+                <h1 className="font-heading text-3xl tracking-tight font-extrabold sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-slate-400 to-slate-700 bg-clip-text text-transparent">
                     Open Source Postman Alternative
                 </h1>
                 <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
