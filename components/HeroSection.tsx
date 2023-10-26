@@ -32,7 +32,9 @@ export function HeroFSection() {
                         </div>
                     </div>
                 </Link>
+              
                 <HeroHeading />
+              
                 <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
                     Firecamp helps to build APIs 3x faster with great developer experience
                 </p>
