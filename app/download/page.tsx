@@ -1,8 +1,5 @@
-import { FC } from "react";
 import Link from "next/link";
-
 import { Seo } from "@/config/seo";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export const metadata = {
