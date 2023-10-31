@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { ListItem } from "@mui/material";
 
-
-const navProductsComponents: { title: string; href: string; description: string }[] = [
+const navProductsComponents: {
+  title: string;
+  href: string;
+  description: string;
+}[] = [
   {
     title: "API Collection",
     href: "/api-collection",
@@ -35,27 +38,30 @@ const navProductsComponents: { title: string; href: string; description: string 
     href: "/api-documentation",
     description: "Publish a beautiful API documentation for team or community",
   },
-]
-
+];
 
 export function NavProducts() {
   return (
     <>
-      <h1 className="text-3xl dark:text-black sm:text-4xl font-bold">Products</h1>
+      <h1 className="text-3xl sm:text-4xl font-bold">Products</h1>
 
-      <div className="text-center dark:text-black py-8">
+      <div className="text-center py-8">
         {navProductsComponents.map((component) => (
           <ListItem key={component.href}>
             <Link
               href={component.href}
               className="w-full text-center border-2 border-zinc-600 dark:border-zinc-500 py-3 px-1 rounded-xl space-y-2"
             >
-              <h2 className="font-bold text-md md:text-lg">{component.title}</h2>
-              <p className="text-xs sm:text-sm dark:text-zinc-500">{component.description}</p>
+              <h2 className="font-bold text-md md:text-lg">
+                {component.title}
+              </h2>
+              <p className="text-xs sm:text-sm dark:text-zinc-500">
+                {component.description}
+              </p>
             </Link>
           </ListItem>
         ))}
       </div>
     </>
-  )
+  );
 }
