@@ -142,7 +142,8 @@ export function NavMenu() {
                     <NavigationMenuItem>
                         <Link href="https://github.com/firecamp-dev/firecamp" legacyBehavior target="_blank">
                             <NavigationMenuLink className={navigationMenuTriggerStyle({ className: "text-foreground/60" })}>
-                                <Image alt="Firecamp GitHub Stars" src="https://img.shields.io/github/stars/firecampdev/firecamp?style=flat&logo=github&label=Star%20Us&labelColor=%230F172A&color=%23fff&cacheSeconds=300" height={24} />
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img alt="Firecamp GitHub Stars" src="https://img.shields.io/github/stars/firecampdev/firecamp?style=flat&logo=github&label=Star%20Us&labelColor=%230F172A&color=%23fff&cacheSeconds=300" height={24} />
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
