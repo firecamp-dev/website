@@ -46,31 +46,6 @@ export default function DownloadPage() {
             </div>
           ))}
         </div>
-
-        <div className="mt-4 mb-2">
-          <h3 className="text-xl font-medium sm:text-2xl mb-2">
-            Canary Version
-          </h3>
-
-          <p className="text-base sm:text-lg text-slate-800 dark:text-slate-400">
-            Try out new features quickly, frequent release
-          </p>
-        </div>
-
-        <div className="grid gap-3">
-          {canaryDownloadLinks.map((link) => (
-            <div key={link.id} className="flex items-center gap-4">
-              <Image src={link.icon} alt={link.title} width={20} height={20} />
-
-              <Link href={link.link} className="hover:underline">
-                <span>{link.title}</span>{" "}
-                <span className="text-slate-700 dark:text-slate-500">
-                  v3.2.3
-                </span>
-              </Link>
-            </div>
-          ))}
-        </div>
       </div>
 
       <p className="text-slate-800 dark:text-slate-400 text-center">
@@ -90,41 +65,32 @@ export default function DownloadPage() {
 const stableDownloadLinks = [
   {
     id: 1,
-    title: "Firecamp for Windows",
+    title: "Firecamp for Windows 64",
     icon: "/microsoft.svg",
-    link: "/",
+    link: "/api/download/winc?arch=64",
   },
   {
     id: 2,
-    title: "Firecamp for Mac",
+    title: "Firecamp for Mac x64",
     icon: "/apple.svg",
-    link: "/",
+    link: "/api/download/mac?arch=x64",
   },
   {
     id: 3,
-    title: "Firecamp for Ubuntu",
-    icon: "/ubuntu.svg",
-    link: "/",
-  },
-];
-
-const canaryDownloadLinks = [
-  {
-    id: 1,
-    title: "Firecamp for Windows",
-    icon: "/microsoft.svg",
-    link: "/",
-  },
-  {
-    id: 2,
-    title: "Firecamp for Mac",
+    title: "Firecamp for Mac arm64",
     icon: "/apple.svg",
-    link: "/",
+    link: "/api/download/mac?arch=arm64",
   },
   {
-    id: 3,
-    title: "Firecamp for Ubuntu",
+    id: 4,
+    title: "Firecamp for Ubuntu x64",
     icon: "/ubuntu.svg",
-    link: "/",
+    link: "/api/download/linux?arch=x64",
+  },
+  {
+    id: 5,
+    title: "Firecamp for Ubuntu arm64",
+    icon: "/ubuntu.svg",
+    link: "/api/download/linux?arch=arm64",
   },
 ];
