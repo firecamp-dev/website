@@ -25,5 +25,12 @@ export async function GET(request: NextRequest) {
 
   const parsed = parseYaml(data);
 
-  return Response.redirect(`${digitalOceanLink}/win/${parsed.path}`);
+  return new Response(
+    JSON.stringify({
+      link: `${digitalOceanLink}/win/${parsed.path}`,
+    }),
+    {
+      status: 200,
+    }
+  );
 }

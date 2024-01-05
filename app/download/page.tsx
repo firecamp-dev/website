@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Seo } from "@/config/seo";
 import Image from "next/image";
@@ -8,6 +10,27 @@ export const metadata = {
 };
 
 export default function DownloadPage() {
+  const handleDownload = async (link: string) => {
+    try {
+      const res = await fetch(link, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!res.ok) {
+        throw new Error("Something went wrong");
+      }
+      const data = await res.json();
+
+      const atag = document.createElement("a");
+      atag.href = data.link;
+      atag.click();
+      atag.remove();
+    } catch (error) {}
+  };
+
   return (
     <section className="container flex flex-col gap-10 py-8 md:max-w-[64rem] md:py-12 lg:py-24 items-center">
       <div className="grid gap-4">
@@ -37,12 +60,15 @@ export default function DownloadPage() {
             <div key={link.id} className="flex items-center gap-4">
               <Image src={link.icon} alt={link.title} width={20} height={20} />
 
-              <Link href={link.link} className="hover:underline">
+              <p
+                className="hover:underline cursor-pointer"
+                onClick={() => handleDownload(link.link)}
+              >
                 <span>{link.title}</span>{" "}
                 <span className="text-slate-700 dark:text-slate-500">
                   v3.2.3
                 </span>
-              </Link>
+              </p>
             </div>
           ))}
         </div>
