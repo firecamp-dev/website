@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { winLinks, parseYaml, digitalOceanLink } from "../common";
+import { redirect } from "next/navigation";
 
 export async function GET(request: NextRequest) {
   let arch = "64";
@@ -25,12 +26,5 @@ export async function GET(request: NextRequest) {
 
   const parsed = parseYaml(data);
 
-  return new Response(
-    JSON.stringify({
-      link: `${digitalOceanLink}/win/${parsed.path}`,
-    }),
-    {
-      status: 200,
-    }
-  );
+  return redirect(`${digitalOceanLink}/win/${parsed.path}`);
 }

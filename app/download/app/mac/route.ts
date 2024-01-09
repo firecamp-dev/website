@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { digitalOceanLink, macLinks, parseYaml } from "../common";
+import { redirect } from "next/navigation";
 
 export async function GET(request: NextRequest) {
   let arch = "x64";
@@ -25,12 +26,5 @@ export async function GET(request: NextRequest) {
 
   const parsed = parseYaml(data);
 
-  return new Response(
-    JSON.stringify({
-      link: `${digitalOceanLink}/mac/${parsed.path}`,
-    }),
-    {
-      status: 200,
-    }
-  );
+  return redirect(`${digitalOceanLink}/mac/${parsed.path}`);
 }

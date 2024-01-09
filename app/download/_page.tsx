@@ -10,27 +10,6 @@ export const metadata = {
 };
 
 export default function DownloadPage() {
-  const handleDownload = async (link: string) => {
-    try {
-      const res = await fetch(link, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (!res.ok) {
-        throw new Error("Something went wrong");
-      }
-      const data = await res.json();
-
-      const atag = document.createElement("a");
-      atag.href = data.link;
-      atag.click();
-      atag.remove();
-    } catch (error) {}
-  };
-
   return (
     <section className="container flex flex-col gap-10 py-8 md:max-w-[64rem] md:py-12 lg:py-24 items-center">
       <div className="grid gap-4">
@@ -60,15 +39,16 @@ export default function DownloadPage() {
             <div key={link.id} className="flex items-center gap-4">
               <Image src={link.icon} alt={link.title} width={20} height={20} />
 
-              <p
+              <Link
                 className="hover:underline cursor-pointer"
-                onClick={() => handleDownload(link.link)}
+                href={link.link}
+                target="_blank"
               >
                 <span>{link.title}</span>{" "}
                 <span className="text-slate-700 dark:text-slate-500">
                   v3.2.3
                 </span>
-              </p>
+              </Link>
             </div>
           ))}
         </div>
@@ -93,30 +73,30 @@ const stableDownloadLinks = [
     id: 1,
     title: "Firecamp for Windows 64",
     icon: "/microsoft.svg",
-    link: "/api/download/win?arch=64",
+    link: "/download/app/win?arch=64",
   },
   {
     id: 2,
     title: "Firecamp for Mac x64",
     icon: "/apple.svg",
-    link: "/api/download/mac?arch=x64",
+    link: "/download/app/mac?arch=x64",
   },
   {
     id: 3,
     title: "Firecamp for Mac arm64",
     icon: "/apple.svg",
-    link: "/api/download/mac?arch=arm64",
+    link: "/download/app/mac?arch=arm64",
   },
   {
     id: 4,
     title: "Firecamp for Ubuntu x64",
     icon: "/ubuntu.svg",
-    link: "/api/download/linux?arch=x64",
+    link: "/download/app/linux?arch=x64",
   },
   {
     id: 5,
     title: "Firecamp for Ubuntu arm64",
     icon: "/ubuntu.svg",
-    link: "/api/download/linux?arch=arm64",
+    link: "/download/app/linux?arch=arm64",
   },
 ];
