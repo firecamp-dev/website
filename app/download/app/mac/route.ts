@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { digitalOceanLink, macLinks, parseYaml } from "../common";
+import { digitalOceanLink, parseYaml } from "../common";
 import { redirect } from "next/navigation";
 
 export async function GET(request: NextRequest) {
@@ -10,21 +10,10 @@ export async function GET(request: NextRequest) {
     arch = query;
   }
 
-  const link = macLinks[arch];
-
-  if (!link) {
-    return new Response("Not found", { status: 404 });
-  }
-
-  const res = await fetch(link);
-
-  if (!res.ok) {
-    return new Response("Not found", { status: 404 });
-  }
-
+  const res = await fetch(`${digitalOceanLink}/mac/latest-mac.yml`);
+  if (!res.ok) return new Response("Not found", { status: 404 });
   const data = await res.text();
-
   const parsed = parseYaml(data);
 
-  return redirect(`${digitalOceanLink}/mac/${parsed.path}`);
+  return redirect(`${digitalOceanLink}/mac/Firecamp-${parsed.version}.${arch}.dmg`);
 }
