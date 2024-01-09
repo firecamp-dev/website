@@ -93,7 +93,7 @@ const stableDownloadLinks = [
     id: 1,
     title: "Firecamp for Windows 64",
     icon: "/microsoft.svg",
-    link: "/api/download/winc?arch=64",
+    link: "/api/download/win?arch=64",
   },
   {
     id: 2,
