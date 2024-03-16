@@ -119,9 +119,9 @@ export function NavMenu() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="/download" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({ className: "text-foreground/60" })}>
-                                Documentation
+                                Download
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

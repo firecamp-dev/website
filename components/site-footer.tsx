@@ -37,6 +37,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     <FooterList
                         name="Developer"
                         links={[
+                            { link: "/download", name: "Download" },
                             { link: "/docs", name: "Documentation" },
                             { link: "/blog", name: "Blog" },
                         ]}
