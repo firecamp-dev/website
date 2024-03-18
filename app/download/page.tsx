@@ -79,7 +79,7 @@ export default function DownloadPage() {
           Privacy Policy
         </Link>{" "}
         and{" "}
-        <Link href="/legal/terms-of-service" className="underline">
+        <Link href="/legal/terms-and-conditions" className="underline">
           Terms
         </Link>
       </p>
