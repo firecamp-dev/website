@@ -68,8 +68,8 @@ export default function DownloadPage() {
           </h3>
         </div>
         <div className="grid grid-cols-1 gap-3">
-          {stableDownloadLinks.map((link) => (
-            <DownloadLink link={link} />
+          {stableDownloadLinks.map((link, i) => (
+            <DownloadLink link={link} key={i}/>
           ))}
         </div>
       </div>
